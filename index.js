@@ -1,3 +1,12 @@
+const express = require("express");
+const cors = require('cors')
+const app = express();
+
+app.use(express.json());
+app.use(cors())
+app.use(express.static('dist'))
+
+
 //mongoose connection
 require("dotenv").config();
 const mongoose = require("mongoose");
@@ -18,14 +27,6 @@ const Category = require("./models/categories");
 const taskController = require("./controllers/taskController");
 const catController = require("./controllers/catController");
 //
-
-const express = require("express");
-const cors = require('cors')
-const app = express();
-
-app.use(express.json());
-app.use(cors())
-
 
 app.get("/api/tasks", taskController.getTask );
 app.post("/api/tasks", taskController.addTask);
