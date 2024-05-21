@@ -38,7 +38,7 @@ app.get("/api/categories", catController.getCategories );
 app.put("/api/categories/:id", catController.addCategories)
 
 
-const PORT = 3003;
+const PORT = process.env.PORT || 3003;
 app.listen(PORT, () => {
   console.log(`listening to port ${PORT}`);
 });
