@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "nodeDev": "nodemon index.js",
     "buildUI": " @powershell rm -recurse -force dist && cd ../ToDoApp && npm run build && @powershell cp -recurse -force dist ../ToDo_backend",
-    "deployBuild": "npm run devBuild && git add . && git commit -m UIbuild && git push"
+    "deployBuild": "npm run buildUI && git add . && git commit -m UIbuild && git push"
   },
   "keywords": [],
   "author": "",
