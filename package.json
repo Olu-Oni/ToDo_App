@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start":"node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "nodeDev": "nodemon index.js",
     "buildUI": " @powershell rm -recurse -force dist && cd ../ToDoApp && npm run build && @powershell cp -recurse -force dist ../ToDo_backend",
