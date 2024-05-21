@@ -3,7 +3,7 @@ const Category = require("../models/categories");
 const getCategories = (req, response) => {
   Category.findOne({})
     .then((categories) => response.json(categories))
-    .catch((err) => response.send(500).send( err));
+    .catch((err) => response.sendStatus(500).send( err));
 };
 
 const setCategories = (req, response) => {

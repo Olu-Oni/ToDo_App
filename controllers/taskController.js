@@ -3,7 +3,7 @@ const Task = require("../models/tasks");
 const getTask = (req, response) => {
   Task.find({})
     .then((tasks) => response.json(tasks))
-    .catch((err) => response.send(500).send( err));
+    .catch((err) => response.sendStatus(500).send( err));
 };
 
 const addTask = (req, response) => {
