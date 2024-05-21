@@ -1,0 +1,7 @@
+POST http://localhost:3003/api/categories
+Content-Type: application/json
+
+{
+  "current": "All",
+  "all": ["All", "Home", "Work", "School"]
+}

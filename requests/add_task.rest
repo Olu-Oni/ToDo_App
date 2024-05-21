@@ -1,0 +1,10 @@
+POST http://localhost:3003/api/tasks
+Content-Type: application/json
+
+{
+    "category": "Home",
+    "title": "Task 3",
+    "desc": "Tasks related to physical or mental health.",
+    "importance": 2,
+    "status": "inProgress"
+}
